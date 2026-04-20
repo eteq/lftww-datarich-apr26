@@ -1,0 +1,80 @@
+slide 1: 
+title slide - talk title, my name, STScI logo
+
+slide 2-3:
+Bullet points with the first bullet initally revealed, and the rest of them on a second slide:
+* Software and algorithms made for tech domains can often be more useful for astronomy if you use them in an unintended way.
+* Case Study 1: ML tech not for ML/AI but for similar data problems - Bayesian modeling of spectra
+* Case Study 2: Video streaming compression methods applied to science-grad astronomy data
+
+slide 4:
+Intro to case study 1 - show an cartoonish image of JWST pointing at a star and a placeholder for a NIRSpec image I will later fill in. Also show the text "Need to create a model that produces data like this... 100000 times."
+
+slide 5-6: 
+A diagram that has arrows connecting boxes that are text over an image. The boxes are:
+1. "Get 1d model spectra of stars" - the image is a 1d plot of a cartoonish spectrum of a sun-like stars over a pile of books to represent a library
+2. "Determine where the light from a part of the  spectrum falls on the detector" - the image is a prminent arrow from a star to the example JWST spectrum used in slide 4
+3. "Model the PSF" - a representative image of a PSF from JWST with a vertical rectangle blocking out some of it.
+4. "Compare to the observations" - the image is a simplified picture of JWST 
+slide 6 is the exact same but with 1, 3, and 4 greyed out
+
+slide 7:
+The picture from number 2 of slide 5-6 on the left side, and the text "GWCS" inside a "file" cartoon on the right.
+
+slide 8:
+Slide 7 but with the pictures greyed out, and a text box over the top that says "But this takes ~1 s per image with the standard data products... so over a day to just do this part of the modeling."
+
+slide 9:
+Text that says "Lets just try blindly throwing ML at it", and a placeholder for a screenshot of a jupyter notebook that I will provide later (aspect ratio of roughly 1:1).
+
+slide 10:
+Identical to slide 9 but with added text that says "Takes only 100us but the precision is only ~1 px... good enough to identify puppies vs kittens but not for probabilistic inference."
+
+slide 11:
+Text that says "What if we use the same ML frameworks to apply polynomial fitting?" and another screenshot placeholder with aspect ratio of roughly 1:1
+
+slide 12:
+Identical to slide 11 but with added text that says "Now we get hundreth of a pixel accuracy again at only 100us".
+
+slide 13:
+Just the text: "If you use ML to make neural networks, sometimes it's worse than using ML GPU acceleration on more traditional methods! Either way, you get more science faster."
+
+Slide 14:
+Intro to case study 2: The following text on the left: "When faced with very large datasets for theastronomy user community, how can we get data to them faster?", with an image of the Nancy Grace Roman Space Telescope on the right
+
+slide 15:
+on the left, a placeholder for a short movie that I will provide later.  On the right, the text "How is it possible to do video compression of ~100x?  Decades of CS and tech company research."
+
+slide 16:
+Show text with representative images  for the following things:
+* "DCT"
+* "Quantization"
+* "Block Transforms"
+* "Frame Prediction"
+* "Chroma Subsampling" 
+* "Entropy Coding"
+
+slide 17:
+Like slide 15 but with the text over the top: "But most of these are lossy, which is not something we accept for astronomy research-grade data."
+
+slide 18:
+Like slide 15 but with everything except "Frame Prediction" and "Entropy Coding"  greyed out
+
+slide 19:
+The text "Up-the-ramp sampling is inherently like a movie scene, so lets apply these methods to that" on the left and on the right, a cartoon of a "stack" of astronomy images.
+
+slide 20:
+A space for a Jupyter notebook image on the left, and on the right the following bullet points:
+* Use the total flux per second from each pixel to predict the flux in each image in the stack
+* Create a difference image between the predicted and real data
+* Rice encode the resulting difference images
+* Compression ratios of 3-5x for all the images (at the price of one additional "rate" image)
+
+slide 21: 
+Slide 20 but greyed  out with the following text over top: We could probably do ~5-10x better if we were willing to do slightly lossy methods.  Is it worth it?
+
+slide 22:  
+The following text in bullet-point form:
+* GPUs and tools for doing ML/AI can be re-purposed to solve very specific astronomy problems like forward modeling of data, but you need to think about using traditional methods in the new tools.
+* Algorithms for data compression of videos can give us significant compression while maintaining astronomical data quality standards but only if we adapt them to our needs instead of using them as they are.
+* Software and algorithms made for tech domains can often be more useful for astronomy if you use them in an unintended way.
